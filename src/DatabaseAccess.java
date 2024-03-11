@@ -72,7 +72,7 @@ public class DatabaseAccess {
             this.selectOneStatement.setString(1, telephone);
             ResultSet result = this.selectOneStatement.executeQuery();
 
-            if (!result.next()) {
+            if (!result.isBeforeFirst()) {
                 return false;
             }
 
